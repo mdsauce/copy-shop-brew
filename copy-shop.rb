@@ -3,7 +3,9 @@ class CopyShop < Formula
   homepage "https://github.com/rgauthier-sauce/copy-shop"
   url "https://github.com/rgauthier-sauce/copy-shop/archive/v1.0.0.tar.gz"
   sha256 ""
-  depends_on "go" => :build
+
+  depends_on "python"
+
   version "1.0.0"
 
   def install
@@ -11,5 +13,6 @@ class CopyShop < Formula
   end
 
   test do
+      system "python3", "copy-shop.py"
   end
 end
